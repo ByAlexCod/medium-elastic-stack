@@ -72,6 +72,5 @@ services:
     environment:
       ELASTIC_USERNAME: ${ELASTIC_USERNAME}
       ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
-      ELASTICSEARCH_HOST_PORT: ${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}
-    ports:
-      - "5601:5601"
+      ELASTICSEARCH_HOST_PORT: localhost:9200
+    network_mode: host
